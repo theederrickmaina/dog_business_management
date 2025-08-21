@@ -1,0 +1,82 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header Section */
+.blog-header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.blog-header .blog-meta {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Blog Content */
+.blog-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-content .featured-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog-content h2 {
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+.blog-content p {
+    margin: 10px 0;
+}
+
+/* Footer Section */
+.blog-footer {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.interaction-buttons {
+    margin-top: 20px;
+}
+
+.like-button {
+    border: none;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-button:hover {
+    color: #007BFF;
+}
+
+.fa-heart {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0089fa83; 
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.desktop-menu .menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.desktop-menu .menu-item:hover {
+    color: #333; 
+}
+
+/* Search Bar */
+.search input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px 20px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.mobile-menu .menu-item {
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-menu .menu-item:hover {
+    color: #f4b400;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .mobile-menu {
+        display: none; /* Hidden by default */
+    }
+    .mobile-menu.active {
+        display: flex;
+    }
+}
+
+.available-dogs {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.available-dogs h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.dog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dog-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+}
+
+.dog-card img {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image is cropped proportionally */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: 5px; 
+}
+
+.dog-card h3, .dog-card p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
