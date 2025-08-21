@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardianPaws Kennels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="img/4196647-hd_1920_1080_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">GuardianPaws Kennels</div>
+            <div class="desktop-menu" id="desktopMenu">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#blog" class="menu-item">Blog</a>
+                <a href="#footers" class="menu-item">Contact Us</a>
+                <a href="login.html" class="menu-item" id="loginLink">Login</a>
+                <a href="cart.html" class="menu-item" id="cartLink">Cart (0)</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#blog" class="menu-item">Blog</a>
+                <a href="#" class="menu-item">Contact Us</a>
+                <a href="login.html" class="menu-item" id="mobileLoginLink">Login</a>
+                <a href="#" class="menu-item" id="mobileCartLink">Cart (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="main-content">
+            <h1 class="main-heading">Explore Our Furry Friends</h1>
+            <p class="subheading">Meet our adorable German Shepherds</p>
+            <div class="image-grid">
+                <img src="img/pexels-girlwithcanvas-7504630.jpg" alt="Image 1" class="grid-image">
+                <img src="img/pexels-imadclicks-9470805.jpg" alt="Image 2" class="grid-image">
+                <img src="img/pexels-manuschorchit-9580296.jpg" alt="Image 3" class="grid-image">
+                <img src="img/pexels-thirdman-9313619.jpg" alt="Image 4" class="grid-image">
+            </div>
+            <a href="login.html" class="get-started-btn" id="getStartedBtn">Get Started</a>
+        </div>
+
+        <!-- Services Section -->
+        <section class="services-section">
+            <h1 class="services-title">Services</h1>
+            <hr class="services-divider">
+            <div class="services-container">
+                <div class="service-card">
+                    <h2 class="service-title">Specialized Dog Training</h2>
+                    <hr>
+                    <p class="service-price">kshs.15000</p>
+                    <button class="service-button" onclick="addToCart()">Add To Cart</button>
+                </div>
+                <div class="service-card">
+                    <h2 class="service-title">Dog-Purchase</h2>
+                    <hr>
+                    <p class="service-price">kshs.60000 - 100000</p>
+                    <button class="service-button" onclick="redirectToDogs()">View Dogs</button>
+                </div>
+                <div class="service-card">
+                    <h2 class="service-title">Breeding Consultation</h2>
+                    <hr>
+                    <p class="service-price">kshs.5000</p>
+                    <button class="service-button" onclick="addToCart()">Add To Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <h2 class="blog-heading">Blog</h2>
+            <hr class="blog-divider">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card">
+                    <img src="img\blog2.png" alt="Puppy with ball" class="blog-image" onclick="openBlogWithViews('blog1.html', 'views1')">
+                    <p class="blog-author">Gatu</p>
+                    <h3 class="blog-title" onclick="openBlogWithViews('blog1.html', 'views1')">Top Tips for Raising Healthy German Shepherds</h3>
+                    <p class="blog-excerpt">German Shepherds are not just beloved pets; they are intelligent, loyal, and versatile animals that make fantastic companions in various roles. If you have recently welcomed a German Shepherd puppy into your home...</p>
+                    <div class="blog-icons">
+                        <span class="views-icon">
+                            <i class="fa-regular fa-eye"></i> <span id="views1">0</span>
+                        </span>
+                        <span class="likes-icon">
+                            <i class="fa-regular fa-heart" onclick="toggleLike('likes1', this)"></i> <span id="likes1">0</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-card">
+                    <img src="img\blog1.png" alt="Group of German Shepherds" class="blog-image" onclick="openBlogWithViews('blog2.html', 'views2')">
+                    <p class="blog-author">Gatu</p>
+                    <h3 class="blog-title" onclick="openBlogWithViews('blog2.html', 'views2')">Benefits of Choosing GuardianPaws Kennels</h3>
+                    <p class="blog-excerpt">Are you considering adding a German Shepherd to your family or professional environment? Look no further than GuardianPaws Kennels, a premier breeding establishment based in Ruiru, Kiambu, Kenya....</p>
+                    <div class="blog-icons">
+                        <span class="views-icon">
+                            <i class="fa-regular fa-eye"></i> <span id="views2">0</span>
+                        </span>
+                        <span class="likes-icon">
+                            <i class="fa-regular fa-heart" onclick="toggleLike('likes2', this)"></i> <span id="likes2">0</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-card">
+                    <img src="img\blog3.png" alt="Group of German Shepherds" class="blog-image" onclick="openBlogWithViews('blog3.html', 'views3')">
+                    <p class="blog-author">Gatu</p>
+                    <h3 class="blog-title" onclick="openBlogWithViews('blog3.html', 'views3')">Ultimate Guide to Training German Shepherds for Security</h3>
+                    <p class="blog-excerpt">German Shepherds are renowned for their intelligence, loyalty, and versatility, making them a popular choice for security training. If you are considering...</p>
+                    <div class="blog-icons">
+                        <span class="views-icon">
+                            <i class="fa-regular fa-eye"></i> <span id="views3">0</span>
+                        </span>
+                        <span class="likes-icon">
+                            <i class="fa-regular fa-heart" onclick="toggleLike('likes3', this)"></i> <span id="likes3">0</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="about-content">
+                <h1>About</h1>
+                <h3>Our Story</h3>
+                <p>
+                    GuardianPaws Kennels in Ruiru, Kenya, specializes in breeding top-quality German Shepherds. We are
+                    dedicated to maintaining superior health and care standards for our dogs. Our services include
+                    personalized vet care, specialized training, and post-sale support to satisfy our diverse clientele's needs.
+                </p>
+                <a href="about.html" class="learn-more-button">Learn More</a>
+            </div>
+            <div class="about-image">
+                <img src="img\aboutimg.jpg" alt="GuardianPaws Story">
+            </div>
+        </section>
+
+        
+        <!-- Our Dogs Section -->
+        <section class="our-dogs">
+            <div class="dogs-header">
+                <h1 class="section-title">Our Dogs</h1>
+                <p class="description">
+                    Explore our furry pals and find your perfect match of a German Shepherd. 
+                    Our dogs are socialized, trained, and ready to become a part of your family.
+                </p>
+            </div>
+            <div class="dogs-content">
+                <!-- Dog Item 1 -->
+                <div class="dog-item">
+                    <img src="img\Ourdogs1.jpg" alt="Dog 1" class="dog-image">
+                    <div class="dog-info">
+                        <h3>Health Guarantee</h3>
+                        <p>
+                            Our health guarantee covers genetic health issues to provide you 
+                            with a healthy and happy companion.
+                        </p>
+                    </div>
+                </div>
+                <!-- Dog Item 2 -->
+                <div class="dog-item reversed">
+                    <img src="img\ourdogs2.jpeg" alt="Dog 2" class="dog-image">
+                    <div class="dog-info">
+                        <h3>Training Programs</h3>
+                        <p>
+                            From basic obedience to advanced skills, our training programs ensure 
+                            your dog becomes a well-behaved member of your family.
+                        </p>
+                    </div>
+                </div>
+                <!-- Dog Item 3 -->
+                <div class="dog-item">
+                    <img src="img\ourdogs3.jpg" alt="Dog 3" class="dog-image">
+                    <div class="dog-info">
+                        <h3>Post-Sale Support</h3>
+                        <p>
+                            We’re here to assist you every step of the way, from advice to any questions 
+                            you may have about your furry companion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-button">
+                <a href="#footers" class="button">Contact Us</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" id="footers">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h1 class="brand">GuardianPaws Kennels</h1>
+                <p class="tagline">Providing healthy, well-trained German Shepherds in Ruiru, Kenya.</p>
+            </div>
+            <div class="footer-middle">
+                <h2>Stay Connected</h2>
+                <p>SUBSCRIBE TO OUR NEWSLETTER FOR DOG TRAINING TIPS AND MORE</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="YOUR E-MAIL" class="email-input">
+                    <button class="subscribe-button">SUBSCRIBE</button>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h2>Contact Us</h2>
+                <p>FOLLOW US</p>
+                <div class="social-icons">
+                    <a href="#" class="icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>CALL US</p>
+                <p class="contact-number">+254 712 345678</p>
+                <p>EMAIL US</p>
+                <p class="contact-email">info@guardianpawskennels.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 GuardianPaws Kennels. All Rights Reserved</p>
+            <p>Developed by @Gatu</p>
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
