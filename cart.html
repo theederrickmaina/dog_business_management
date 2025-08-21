@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - GuardianPaws Kennels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">GuardianPaws Kennels</div>
+            <div class="desktop-menu">
+                <a href="doghome.html" class="menu-item">Home</a>
+                <a href="#blog" class="menu-item">Blog</a>
+                <a href="#footers" class="menu-item">Contact Us</a>
+                <a href="login.html" class="menu-item">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <h1>Your Cart</h1>
+        <div id="cart-items" class="cart-container">
+            <!-- Cart Items will be dynamically added here -->
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h2>Cart Summary</h2>
+            <div class="summary-item">
+                <span>Subtotal:</span>
+                <span id="subtotal">Kshs. 0</span>
+            </div>
+            <div class="summary-item">
+                <span>Tax (16%):</span>
+                <span id="tax">Kshs. 0</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total:</span>
+                <span id="total">Kshs. 0</span>
+            </div>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <footer class="footer" id="footers">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h1 class="brand">GuardianPaws Kennels</h1>
+                <p class="tagline">Providing healthy, well-trained German Shepherds in Ruiru, Kenya.</p>
+            </div>
+            <div class="footer-middle">
+                <h2>Stay Connected</h2>
+                <p>SUBSCRIBE TO OUR NEWSLETTER FOR DOG TRAINING TIPS AND MORE</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="YOUR E-MAIL" class="email-input">
+                    <button class="subscribe-button">SUBSCRIBE</button>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h2>Contact Us</h2>
+                <p>FOLLOW US</p>
+                <div class="social-icons">
+                    <a href="#" class="icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>CALL US</p>
+                <p class="contact-number">+254 712 345678</p>
+                <p>EMAIL US</p>
+                <p class="contact-email">info@guardianpawskennels.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 GuardianPaws Kennels. All Rights Reserved</p>
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

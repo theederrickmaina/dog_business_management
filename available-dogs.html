@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Dogs</title>
+    <link rel="stylesheet" href="styles/dogs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">GuardianPaws Kennels</div>
+            <div class="desktop-menu" id="desktopMenu">
+                <a href="doghome.html" class="menu-item">Home</a>
+                <a href="#blog" class="menu-item">Blog</a>
+                <a href="#footers" class="menu-item">Contact Us</a>
+                <a href="login.html" class="menu-item" id="loginLink">Login</a>
+                <a href="cart.html" class="menu-item" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="doghome.html" class="menu-item">Home</a>
+                <a href="#blog" class="menu-item">Blog</a>
+                <a href="#footers" class="menu-item">Contact Us</a>
+                <a href="login.html" class="menu-item" id="mobileLoginLink">Login</a>
+                <a href="cart.html" class="menu-item" id="mobileCartLink">Cart (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Available Dogs Section -->
+    <section class="available-dogs">
+        <h1>Available Dogs</h1>
+        <div class="dog-grid">
+            <!-- Dog Cards -->
+            <!-- Repeat this structure for each dog -->
+            <div class="dog-card">
+                <img src="img/cart1.jpg" alt="Dog 1">
+                <h3>Name: Lona</h3>
+                <p>Sex: female</p>
+                <p>Age: 2 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 75,000</p>
+                <button class="add-to-cart" data-id="1" 
+                data-name="Lona" 
+                data-sex="Female" 
+                data-price="75000"
+                data-image="img/cart1.jpg">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\cart2.jpg" alt="Dog 2">
+                <h3>Name: Romeo</h3>
+                <p>Sex: male</p>
+                <p>Age: 3 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 85,000</p>
+                <button class="add-to-cart" data-id="2" 
+                data-name="Romeo" 
+                data-sex="Male" 
+                data-price="85000"
+                data-image="img\cart2.jpg">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\bingo.png" alt="Dog 3">
+                <h3>Name: Bingo</h3>
+                <p>Sex: female</p>
+                <p>Age: 2 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 80,000</p>
+                <button class="add-to-cart" data-id="3" 
+                data-name="Bingo" 
+                data-sex="Female" 
+                data-price="80000"
+                data-image="img\bingo.png">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\cart4.jpg" alt="Dog 4">
+                <h3>Name: Tingo</h3>
+                <p>Sex: female</p>
+                <p>Age: 2 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 75,000</p>
+                <button class="add-to-cart" data-id="4" 
+                data-name="Tingo" 
+                data-sex="Female" 
+                data-price="75000"
+                data-image="img\cart4.jpg">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\cart5.png" alt="Dog 5">
+                <h3>Name: Max</h3>
+                <p>Sex: male</p>
+                <p>Age: 4 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 75,000</p>
+                <button class="add-to-cart" data-id="5" 
+                data-name="Max" 
+                data-sex="Male" 
+                data-price="75000"
+                data-image="img\cart5.png">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\cart6.jpg" alt="Dog 6">
+                <h3>Name: Kinda</h3>
+                <p>Sex: female</p>
+                <p>Age: 1 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 60,000</p>
+                <button class="add-to-cart" data-id="6" 
+                data-name="Kinda" 
+                data-sex="Female" 
+                data-price="60000"
+                data-image="img\cart6.jpg">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\cart7.jpg" alt="Dog 7">
+                <h3>Name: Maxi</h3>
+                <p>Sex: female</p>
+                <p>Age: 2 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 75,000</p>
+                <button class="add-to-cart" data-id="7" 
+                data-name="Maxi" 
+                data-sex="Female" 
+                data-price="75000"
+                data-image="img\cart7.jpg">Add to Cart</button>
+            </div>
+
+            <div class="dog-card">
+                <img src="img\simba.png" alt="Dog 8">
+                <h3>Name: Simba</h3>
+                <p>Sex: male</p>
+                <p>Age: 5 years</p>
+                <p>Status: Available</p>
+                <p>Price: Kshs. 100,000</p>
+                <button class="add-to-cart" data-id="8" 
+                data-name="Simba" 
+                data-sex="Male" 
+                data-price="100000"
+                data-image="img\simba.png">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="about-footer">
+        <p>© 2024 GuardianPaws Kennels. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@guardianpawskennels.com">info@guardianpawskennels.com</a> or call <a href="tel:+254712345678">+254 712 345 678</a>.</p>
+    </footer>
+
+    <script>
+        // Initialize the cart array from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Update cart count on the navigation bar
+        function updateCartCount() {
+            const cartCount = cart.length;
+            document.getElementById("cartCount").textContent = cartCount;
+            document.getElementById("mobileCartLink").textContent = `Cart (${cartCount})`;
+        }
+
+        // Add an item to the cart
+        function addToCart(item) {
+            const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+
+            if (existingItem) {
+                alert("This item is already in the cart!");
+            } else {
+                cart.push(item);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCount();
+                alert("Item added to the cart!");
+            }
+        }
+
+        // Attach event listeners to "Add to Cart" buttons
+        document.querySelectorAll(".add-to-cart").forEach((button) => {
+            button.addEventListener("click", function () {
+                const item = {
+                    id: this.getAttribute("data-id"),
+                    name: this.getAttribute("data-name"),
+                    sex: this.getAttribute("data-sex"),
+                    price: this.getAttribute("data-price"),
+                    image: this.getAttribute("data-image"),
+                };
+                addToCart(item);
+            });
+        });
+
+        // Update cart count when the page loads
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+
+
+    </script>
+</body>
+</html>

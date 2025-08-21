@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the top tips for raising healthy German Shepherds.">
+    <title>Top Tips for Raising Healthy German Shepherds</title>
+    <link rel="stylesheet" href="css/blogstyling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="blog-header">
+        <h1>Top Tips for Raising Healthy German Shepherds</h1>
+        <p class="blog-meta">By Gatu | <span id="viewCount">0 Views</span></p>
+    </header>
+
+    <!-- Main Blog Content -->
+    <main class="blog-content">
+        <img src="img/blog2.png" alt="Puppy with ball" class="featured-image">
+        <p>
+            German Shepherds are not just beloved pets; they are intelligent, loyal, and versatile animals that make fantastic companions in various roles. 
+            If you have recently welcomed a German Shepherd puppy into your home, it’s crucial to understand how to provide the best care possible to ensure they grow into healthy, well-adjusted adults.
+        </p>
+
+        <h2>1. Balanced Nutrition</h2>
+        <p>
+            Provide high-quality food that is rich in protein and essential nutrients. Puppies require food specially designed for their growth, while adult German Shepherds need a diet tailored to their energy levels.
+        </p>
+
+        <h2>2. Regular Exercise</h2>
+        <p>
+            German Shepherds are active dogs that require daily exercise to keep them physically and mentally stimulated. Take them for walks, play fetch, or engage them in agility training.
+        </p>
+
+        <h2>3. Proper Training and Socialization</h2>
+        <p>
+            Start training and socializing your puppy early. Positive reinforcement techniques work best for German Shepherds, as they respond well to encouragement and rewards.
+        </p>
+
+        <h2>4. Routine Vet Visits</h2>
+        <p>
+            Regular check-ups and vaccinations are essential to keep your dog healthy. Keep an eye out for breed-specific health concerns such as hip dysplasia.
+        </p>
+    </main>
+
+    <!-- Like Section -->
+    <footer class="blog-footer">
+        <div class="interaction-buttons">
+            <button class="like-button" onclick="toggleLike()">
+                <i id="likeIcon" class="fa-regular fa-heart"></i> <span id="likeCount">0</span> Likes
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Views and Likes
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewCountElement = document.getElementById('viewCount');
+            const likeCountElement = document.getElementById('likeCount');
+            const likeIconElement = document.getElementById('likeIcon');
+
+            // Load views and likes from localStorage
+            const storedViews = localStorage.getItem('blog1_views');
+            const storedLikes = localStorage.getItem('blog1_likes');
+
+            if (storedViews) {
+                viewCountElement.textContent = `${storedViews} Views`;
+            } else {
+                // Initialize view count
+                let currentViews = parseInt(viewCountElement.textContent) || 0;
+                viewCountElement.textContent = `${currentViews + 1} Views`;
+                localStorage.setItem('blog1_views', currentViews + 1);
+            }
+
+            if (storedLikes) {
+                likeCountElement.textContent = storedLikes;
+                if (storedLikes > 0) likeIconElement.classList.add('fa-solid');
+            }
+        });
+
+        function toggleLike() {
+            const likeCountElement = document.getElementById('likeCount');
+            const likeIconElement = document.getElementById('likeIcon');
+            let currentLikes = parseInt(likeCountElement.textContent) || 0;
+
+            if (likeIconElement.classList.contains('fa-solid')) {
+                // Unlike
+                likeIconElement.classList.remove('fa-solid');
+                likeIconElement.classList.add('fa-regular');
+                likeCountElement.textContent = currentLikes - 1;
+            } else {
+                // Like
+                likeIconElement.classList.remove('fa-regular');
+                likeIconElement.classList.add('fa-solid');
+                likeCountElement.textContent = currentLikes + 1;
+            }
+
+            // Save to localStorage
+            localStorage.setItem('blog1_likes', likeCountElement.textContent);
+        }
+    </script>
+</body>
+</html>

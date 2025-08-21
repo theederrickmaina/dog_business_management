@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the benefits of choosing GuardianPaws Kennels for your German Shepherd needs.">
+    <title>Benefits of Choosing GuardianPaws Kennels</title>
+    <link rel="stylesheet" href="css/blogstyling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="blog-header">
+        <h1>Benefits of Choosing GuardianPaws Kennels</h1>
+        <p class="blog-meta">By Gatu | <span id="viewCount">0 Views</span></p>
+    </header>
+
+    <!-- Main Blog Content -->
+    <main class="blog-content">
+        <img src="img/blog1.png" alt="Group of German Shepherds" class="featured-image">
+        <p>
+            Are you considering adding a German Shepherd to your family or professional environment? Look no further than **GuardianPaws Kennels**, a premier breeding establishment based in Ruiru, Kiambu, Kenya. 
+            Here are some of the key benefits of choosing GuardianPaws Kennels for your German Shepherd needs.
+        </p>
+
+        <h2>1. Healthy, High-Quality Breeds</h2>
+        <p>
+            GuardianPaws Kennels specializes in breeding top-tier German Shepherds. Each dog is carefully bred to ensure good health, strong genetics, and excellent temperament.
+        </p>
+
+        <h2>2. Expert Care and Training</h2>
+        <p>
+            The dogs at GuardianPaws Kennels receive expert care from professional breeders who have years of experience in training and handling German Shepherds. This ensures that your dog will be well-behaved and ready to integrate into your home.
+        </p>
+
+        <h2>3. A Trusted Reputation</h2>
+        <p>
+            Over the years, GuardianPaws Kennels has built a stellar reputation for providing exceptional German Shepherds. Many clients praise the quality of their dogs and the professionalism of the staff.
+        </p>
+
+        <h2>4. Personalized Support</h2>
+        <p>
+            When you purchase a German Shepherd from GuardianPaws Kennels, you’re not just getting a dog—you’re also receiving lifelong support. The team is always ready to assist with training tips, health advice, and more.
+        </p>
+
+        <h2>5. Location and Accessibility</h2>
+        <p>
+            Conveniently located in Ruiru, Kiambu, Kenya, GuardianPaws Kennels is easily accessible. Whether you’re in Nairobi or the surrounding areas, a visit to their facilities will leave you impressed.
+        </p>
+    </main>
+
+    <!-- Like Section -->
+    <footer class="blog-footer">
+        <div class="interaction-buttons">
+            <button class="like-button" onclick="toggleLike()">
+                <i id="likeIcon" class="fa-regular fa-heart"></i> <span id="likeCount">0</span> Likes
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Views and Likes
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewCountElement = document.getElementById('viewCount');
+            const likeCountElement = document.getElementById('likeCount');
+            const likeIconElement = document.getElementById('likeIcon');
+
+            // Load views and likes from localStorage
+            const storedViews = localStorage.getItem('blog2_views');
+            const storedLikes = localStorage.getItem('blog2_likes');
+
+            if (storedViews) {
+                viewCountElement.textContent = `${storedViews} Views`;
+            } else {
+                // Initialize view count
+                let currentViews = parseInt(viewCountElement.textContent) || 0;
+                viewCountElement.textContent = `${currentViews + 1} Views`;
+                localStorage.setItem('blog2_views', currentViews + 1);
+            }
+
+            if (storedLikes) {
+                likeCountElement.textContent = storedLikes;
+                if (storedLikes > 0) likeIconElement.classList.add('fa-solid');
+            }
+        });
+
+        function toggleLike() {
+            const likeCountElement = document.getElementById('likeCount');
+            const likeIconElement = document.getElementById('likeIcon');
+            let currentLikes = parseInt(likeCountElement.textContent) || 0;
+
+            if (likeIconElement.classList.contains('fa-solid')) {
+                // Unlike
+                likeIconElement.classList.remove('fa-solid');
+                likeIconElement.classList.add('fa-regular');
+                likeCountElement.textContent = currentLikes - 1;
+            } else {
+                // Like
+                likeIconElement.classList.remove('fa-regular');
+                likeIconElement.classList.add('fa-solid');
+                likeCountElement.textContent = currentLikes + 1;
+            }
+
+            // Save to localStorage
+            localStorage.setItem('blog2_likes', likeCountElement.textContent);
+        }
+    </script>
+</body>
+</html>
